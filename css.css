@@ -22,44 +22,80 @@
   [class*="col-"] {
     float: left;
   }
-  .row{
-      padding: 0em 1em 0em 1em;
-      border:  solid rgb(255, 0, 0) 5px;
-  }
+ 
 
   .header p {
-    background-color: #0c0127;
-    color: #ffffff;
-    padding: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    text-align: center;
+    background-color: #0c0127;color: #ffffff;
+    padding: 0.9em;
+    font-size: 0.9em; font-weight:500;text-align: center;
   }
-  .flexbox-container{
-    position: sticky;
-    top: -1px;
-    border:  solid black 5px;
-}
-.flexbox-container ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content;
-    background-color: inherit;
-  }
-.margin-break{
-    border: black solid 5px;
-    margin-right: 10em;
-}
-  .middle-section{
+ .header span{
+   color: rgb(202, 172, 0);
+ }
+   
+      /*First pop out box */
+      .pop-out-heading{
+        background-color: white;
+        margin: 2em 0em;
+        padding:1.2em 1.3em;
+        border: solid black 1px;
+      }
+      .pop-out-heading:hover{
+       animation: prueba 0.1s  normal forwards;
+      }
+      @keyframes prueba{
+        25%{ position: relative;top: -0px; right: -0px;}
+         100% {position: relative;top: -5px; right: -5px;
+         box-shadow: -8px 8px 0px 0px black; }
+     
+         
+      }
 
-border:  solid black 5px;
+      .pop-out-heading p{font-size: 0.8em;margin-top: 1em;}
+      .pop-out-heading h2 {font-size: 1.2em;}
+        
+      
+
+
+
+     /*First pop out box */
+
+
+     /* all grid card layout*/
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(2, 0.8em);
+  grid-template-areas: 
+  "tit tit  . . . .  .  .  . . . .  . per  . .  "
+   ". . . . . . . . . . . . . . . . "
+  "lea lea  lea  .  .  .  . . . . .  ran ran ran . arr  "
+  ;
+  background-color: white;
+  padding: 32px 22px;
+  margin-top: 1em;
+
 }
-  
- 
+.title{grid-area: tit;}
+.learn{grid-area: lea;}
+.percent{grid-area: per;}
+.range{grid-area: ran;}
+.arrow{ grid-area: arr;}
+input{
+  width: 100%;border: solid black 2px;
+}
+.pop-out-heading span{background-color:#0c0127;color: white;font-size: 15px;font-weight: lighter;padding:2px;}
+.my-courses h3{font-size: 0.875em; font-weight: lighter;}
+.my-courses p{font-size: 1.1em; font-weight: bolder;}
+.my-courses span{ color: #3A10E5; font-size: 0.7em;margin-left: 2%;}
+
+
+
+      /* all grid card layout*/
+
   .mygoals {
     background-color: #33b5e5;
-    margin-left: 8em;
+ margin-left: 5em;
     color: #ffffff;
     text-align: center;
     font-size: 14px;
@@ -96,7 +132,58 @@ border:  solid black 5px;
     .col-12 {width: 100%;}
 
     .row{
-        padding: 0em 8em 0em 8em;
-        border:  solid rgb(255, 0, 0) 5px;
+        width: 65%;
+        margin:auto;
     }
+
+
+     /* Flexbox */
+
+
+  .flexbox-container{
+    position: sticky;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    top: -1px;
+    background-color: inherit;
+    padding: 19px;
+    
+}
+.flexbox{
+    display: flex;
+    flex-direction: row;justify-content:space-around;align-items:center;
+    list-style: none;
+    background-color: inherit;
+    font-size: 15px;
+    margin-right: 0.6%;
+  }
+.arrow-down img{
+  width: 15px;
+}
+.secondflex{
+background-color: inherit;
+display: flex;justify-content: right;
+margin-right: 1%;
+}
+.secondflex ul {
+    display: flex;flex-direction: row;justify-content: space-between ;
+     align-items: center;
+    background-color: inherit; list-style: none;
+    width: 60%;
+}
+.secondflex img{width: 1.5em;}
+.profile-icon img{width: 40px;border-radius: 50%;}
+
+.secondflex button {
+  background-color: #3A10E5; color: white;border: none;border-radius: 0.2em;
+  font-size: 15px;font-weight: bold;
+  padding: 0.7em 1em;
+ 
+}
+      /* Flexbox end */
+
+
+
+
   }
