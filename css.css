@@ -3,68 +3,47 @@
     padding: 0%;
     margin: 0%;
   }
-  body{
-      
-      background-color: rgb(255, 240, 229);
-  }
-  html {
-    font-family: "Lucida Sans", sans-serif;
-  }
-  
-  
+  body{ background-color: rgb(255, 240, 229);  }
+
+  html { font-family: "Lucida Sans", sans-serif; }
+   
   .row::after {
     content: "";
     clear: both;
     display: table;
-   
   }
-  
+
   [class*="col-"] {
     float: left;
   }
- 
 
   .header p {
     background-color: #0c0127;color: #ffffff;
-    padding: 0.9em;
+    padding: 0.8em;
     font-size: 0.9em; font-weight:500;text-align: center;
   }
  .header span{
    color: rgb(202, 172, 0);
  }
   /* Flexbox */
-.flexbox li:hover{ color: #3A10E5;cursor: pointer;}
-.secondflex img:hover{ background-color: grey;}
-
-  .center{
-    position: sticky;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    top: -1px;
-    background-color: inherit;
-    padding: 25px;
- 
+.flexbox li img { width: 9em;}
+.flexbox-container {
+  position: sticky;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  top: -1px;
+  background-color: rgb(255, 255, 255);padding: 4px;
 }
+.center{display: flex; justify-content: space-between; width: 100%; padding: 10px;}
 .flexbox{
     display: flex;
     flex-direction: row;justify-content:left;align-items:center;
     list-style: none;
-    background-color: inherit;
-    font-size: 15px;
-    width: 100%;
-   
-
-  
+    background-color: inherit;font-size: 15px;width: 100%;
   }
 .arrow-down img{
   width: 15px;
-}
-.secondflex{
-background-color: inherit;
-display: flex;justify-content: right;
-
-
 }
 .secondflex ul {
     display: flex;flex-direction: row;justify-content: space-between ;
@@ -75,22 +54,14 @@ display: flex;justify-content: right;
 .secondflex img{width: 1.5em;}
 .profile-icon img{width: 40px;border-radius: 50%;}
 
-.secondflex button {
-  background-color: #3A10E5; color: white;border: none;border-radius: 0.2em;
-  font-size: 15px;font-weight: bold;
-  padding: 0.7em 1em;
- 
-}
 .disapear{display: none;}
       /* Flexbox end */
 
 
       /*First pop out box */
       .pop-out-heading{
-        background-color: white;
-        margin: 2em 0em;
-        padding:1.2em 1.3em;
-        border: solid black 1px;
+        background-color: white; border: solid black 1px;
+        margin: 2em 0em;padding:0.5em 1.3em;
       }
       .pop-out-heading:hover{
        animation: prueba 0.3s  normal forwards;
@@ -99,16 +70,10 @@ display: flex;justify-content: right;
         25%{ position: relative;top: -0px; right: -0px;}
          100% {position: relative;top: -5px; right: -5px;
          box-shadow: -8px 8px 0px 0px black; }
-     
-         
       }
 
       .pop-out-heading p{font-size: 0.8em;margin-top: 1em;}
       .pop-out-heading h2 {font-size: 1.2em;}
-        
-      
-
-
 
      /*First pop out box */
 
@@ -128,18 +93,16 @@ padding-bottom: 2em; }
   background-color: white;
   padding: 32px 22px;
   margin-top: 1em;
-  
-
 }
 .title{grid-area: tit;}
 .learn{grid-area: lea;}
 .percent{grid-area: per;}
 .range{grid-area: ran;}
 .arrow{ grid-area: arr;}
-input{
-  width: 100%;border: solid black 2px;
-}
-.pro-span{background-color:#0c0127;color: white;font-size: 15px;font-weight: lighter;padding:2px;}
+input{width: 100%;border: solid black 2px;}
+  
+
+.pro-span{background-color:#0c0127;color: white;font-size: 14px;font-weight: lighter;padding:0.5px;}
 .h2title h3{font-size: 0.875em; font-weight: lighter;}
 .h2title p{font-size: 1.1em; font-weight: bolder;}
 .h2title span{ color: #3A10E5; font-size: 0.7em;margin-left: 2%;}
@@ -154,18 +117,13 @@ display: flex; justify-content: space-between;
 .insidejs div{
   padding: 0em 1.5em;
 }
+ .row{
+   padding: 40px 16px 64px 16px;
+ }
  
- 
-  /* all grid card layout*/
+  /* all grid card layout end*/
 
-  .mygoals {
-    background-color: #33b5e5;
-    color: #ffffff;
-    text-align: center;
-    font-size: 14px;
-    
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
+  
   .right-column{
     display: none;
   }
@@ -182,7 +140,9 @@ display: flex; justify-content: space-between;
   [class*="col-"] {
     width: 100%;
   }
-  
+  @media only screen and (min-width: 480px) {.row{ padding: 40px 32px 64px 32px;}
+  }
+ 
   @media only screen and (min-width: 768px) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
@@ -198,27 +158,16 @@ display: flex; justify-content: space-between;
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 
-    .row{
-        width: 65%;
-        margin:auto;
-    }
-
-
-    
-
-
-
+    .row{padding: 40px 64px 64px 64px;}
   }
 
   @media only screen and (min-width: 1024px) {
-    .row{
-      padding: 40px 64px 64px 64px;
-      width: 100%;
-    }
-    .right-column{
-      display:inherit;
-    }
+    .row{padding: 40px 96px 64px 96px; }
+
+    .right-column{  display:inherit;}
     .disapear{display: inherit;}
+    
+    
     .middle-section{
  width: 60%;
     
@@ -234,7 +183,8 @@ display: flex; justify-content: space-between;
     align-items: center;
     top: -1px;
     background-color: inherit;
-    padding: 22px;
+    padding: 15px;
+   
     
 }
 .flexbox{
@@ -283,7 +233,11 @@ width: 18em ;
 }
       /* Flexbox end */
 
+      .right-column{
+        margin-left:20px ;padding: 10em; border: black solid; width: 20em;
+      }
   }
+  @media only screen and (min-width: 1200px) {.row{padding: 40px 96px 64px 96px;}}
   @media only screen and (min-width: 1440px) {
     .row{
      padding: 40px 96px 64px 96px;
@@ -295,17 +249,13 @@ width: 18em ;
       width: 50em;margin: auto;
      }
      .secondflex{
-    
-     
+    width: 20em;
+
       
      }
-    
-   
      .center {
-       display: flex;width: 90em; margin: auto;  }
+       display: flex;width: 90em; margin: auto; }
 
-.right-column{
-  padding: 10em; border: black solid; width: 35.8981%;
-}
+
   }
   
